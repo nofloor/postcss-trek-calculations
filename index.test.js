@@ -26,6 +26,10 @@ test('basic calculations', () => {
   decl.value = '(5 - 2*3 +10)';
   trekCalculations.Declaration(decl);
   expect(decl.value).toBe('9');
+  
+  decl.value = '0 (3 * 4 / 6) 12px 0';
+  trekCalculations.Declaration(decl);
+  expect(decl.value).toBe('0 2 12px 0');
 });
 
 test('calculation unit', () => {
